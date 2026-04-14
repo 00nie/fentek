@@ -83,6 +83,10 @@ nav {
   transition: color 0.2s;
 }
 
+.nav-links .btn-primary {
+  color: #fff;
+}
+
 .nav-links a:hover { color: var(--text) }
 
 
