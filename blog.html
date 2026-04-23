@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — FenTek | Fence Industry Insights & AI Technology</title>
+  <meta name="description" content="Insights on fence contracting, AI technology, and growing your fence business. Tips, trends, and strategies from FenTek.">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&family=General+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .blog-hero{padding:140px 40px 60px;text-align:center}
+    .blog-hero h1{font-size:clamp(32px,5vw,52px);letter-spacing:-1.5px;margin-bottom:12px}
+    .blog-hero p{font-size:17px;color:var(--text2);max-width:500px;margin:0 auto}
+    .blog-grid{max-width:900px;margin:0 auto;padding:0 40px 100px;display:flex;flex-direction:column;gap:32px}
+    .blog-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .3s;cursor:pointer;text-decoration:none;color:inherit;display:block}
+    .blog-card:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.4)}
+    .blog-card-body{padding:32px}
+    .blog-card .tag-row{display:flex;gap:8px;margin-bottom:14px}
+    .blog-card .tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;padding:4px 10px;border-radius:6px;background:var(--green-glow);color:var(--green-light)}
+    .blog-card .tag.blue{background:rgba(59,130,246,0.12);color:#60A5FA}
+    .blog-card .tag.orange{background:rgba(231,111,81,0.12);color:#E76F51}
+    .blog-card h2{font-size:24px;letter-spacing:-0.5px;margin-bottom:10px;line-height:1.3}
+    .blog-card .excerpt{font-size:15px;color:var(--text2);line-height:1.7;margin-bottom:16px}
+    .blog-card .meta{font-size:13px;color:var(--text3);display:flex;gap:16px;align-items:center}
+    .blog-card .meta .dot{width:4px;height:4px;border-radius:50%;background:var(--text3)}
+    .blog-card .read-more{color:var(--green-light);font-weight:600;font-size:14px}
+
+    .blog-post{max-width:720px;margin:0 auto;padding:140px 40px 100px}
+    .blog-post .back{color:var(--green-light);text-decoration:none;font-size:14px;font-weight:500;display:inline-flex;align-items:center;gap:6px;margin-bottom:32px}
+    .blog-post .back:hover{opacity:0.8}
+    .blog-post .post-meta{display:flex;gap:16px;align-items:center;margin-bottom:24px;font-size:13px;color:var(--text3)}
+    .blog-post .post-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--text3)}
+    .blog-post h1{font-size:clamp(28px,4vw,40px);letter-spacing:-1px;margin-bottom:24px;line-height:1.2}
+    .blog-post .post-body h2{font-size:22px;margin:32px 0 12px;letter-spacing:-0.3px}
+    .blog-post .post-body p{font-size:16px;color:var(--text2);line-height:1.8;margin-bottom:20px}
+    .blog-post .post-body strong{color:var(--text)}
+    .blog-post .post-body ul{margin:0 0 20px 20px;color:var(--text2)}
+    .blog-post .post-body ul li{font-size:16px;line-height:1.8;margin-bottom:8px}
+    .post-cta{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:32px;text-align:center;margin-top:48px}
+    .post-cta h3{font-size:20px;margin-bottom:8px}
+    .post-cta p{font-size:14px;color:var(--text2);margin-bottom:20px}
+
+    .hidden{display:none}
+    @media(max-width:700px){.blog-hero{padding:120px 20px 40px}.blog-grid{padding:0 20px 60px}.blog-post{padding:120px 20px 60px}.blog-card-body{padding:24px}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Fen<span>Tek</span></a>
+  <div class="nav-links">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#how">How it works</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="#" class="btn btn-primary">Start free trial</a>
+  </div>
+</nav>
+
+<!-- BLOG INDEX -->
+<div id="blog-index">
+  <div class="blog-hero">
+    <h1>The Fen<span style="color:var(--green-light)">Tek</span> Blog</h1>
+    <p>Insights on fence contracting, AI technology, and growing your business.</p>
+  </div>
+
+  <div class="blog-grid">
+
+    <!-- POST 1 -->
+    <a class="blog-card" onclick="showPost('post1')">
+      <div class="blog-card-body">
+        <div class="tag-row"><span class="tag">AI & Technology</span></div>
+        <h2>How AI Satellite Estimating Is Changing Fence Contracting Forever</h2>
+        <div class="excerpt">The days of driving to every property with a measuring wheel are ending. Here's how AI-powered satellite estimating works, why it's more accurate than you think, and what it means for your bottom line.</div>
+        <div class="meta">
+          <span>April 10, 2026</span>
+          <span class="dot"></span>
+          <span>6 min read</span>
+          <span class="dot"></span>
+          <span class="read-more">Read more →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- POST 2 -->
+    <a class="blog-card" onclick="showPost('post2')">
+      <div class="blog-card-body">
+        <div class="tag-row"><span class="tag blue">Business Growth</span></div>
+        <h2>5 Reasons You're Losing Fence Jobs (And How to Fix Each One Today)</h2>
+        <div class="excerpt">Most fence contractors close about 35% of their quotes. The top performers close over 55%. The difference isn't price — it's speed, professionalism, and follow-up. Here are the five biggest deal-killers and how to eliminate them.</div>
+        <div class="meta">
+          <span>April 7, 2026</span>
+          <span class="dot"></span>
+          <span>7 min read</span>
+          <span class="dot"></span>
+          <span class="read-more">Read more →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- POST 3 -->
+    <a class="blog-card" onclick="showPost('post3')">
+      <div class="blog-card-body">
+        <div class="tag-row"><span class="tag orange">Industry Trends</span></div>
+        <h2>The $72 Billion Fence Market: Where the Growth Is in 2026</h2>
+        <div class="excerpt">The US fencing market is booming, but not all segments are growing equally. Privacy fencing, aluminum, and composite materials are surging while traditional chain link flattens. Here's where smart contractors are positioning themselves.</div>
+        <div class="meta">
+          <span>April 3, 2026</span>
+          <span class="dot"></span>
+          <span>5 min read</span>
+          <span class="dot"></span>
+          <span class="read-more">Read more →</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- POST 1 FULL -->
+<div id="post1" class="blog-post hidden">
+  <a class="back" onclick="showIndex()">← Back to blog</a>
+  <div class="post-meta">
+    <span>April 10, 2026</span><span class="dot"></span><span>6 min read</span><span class="dot"></span><span style="color:var(--green-light)">AI & Technology</span>
+  </div>
+  <h1>How AI Satellite Estimating Is Changing Fence Contracting Forever</h1>
+  <div class="post-body">
+    <p>Every fence contractor knows the routine: a lead calls in, you schedule a site visit, drive 30-45 minutes to the property, walk the perimeter with a measuring wheel, take some photos, drive home, sit down with a calculator or spreadsheet, and finally send a quote 1-3 days later. By then, there's a good chance the homeowner has already hired someone faster.</p>
+    <p>That entire process is about to become optional.</p>
+
+    <h2>What Is AI Satellite Estimating?</h2>
+    <p>AI satellite estimating uses high-resolution aerial and satellite imagery — the same kind you see on Google Maps — combined with property boundary data, elevation models, and machine learning to let you measure and quote a fence job <strong>without ever visiting the property</strong>.</p>
+    <p>Here's how it works: you enter the customer's address, the system pulls up a bird's-eye view of their property with lot lines overlaid, you trace the fence path on the map with your finger or mouse, and the software calculates linear footage, post count, gate locations, and even terrain adjustments automatically.</p>
+
+    <h2>How Accurate Is It Really?</h2>
+    <p>The most common pushback we hear is "there's no way that's as accurate as measuring in person." Fair concern. Here's the reality:</p>
+    <ul>
+      <li><strong>Linear footage accuracy:</strong> Within 2-3% of hand measurement on flat terrain. Satellite imagery resolution has improved dramatically in recent years, and property boundary data from county GIS systems is highly precise.</li>
+      <li><strong>Post count:</strong> Calculated algorithmically based on your spacing preferences (6', 7', 8' on center), so it's actually more consistent than hand-counting, which is prone to human error.</li>
+      <li><strong>Terrain adjustments:</strong> Elevation data from USGS and LIDAR surveys allows the system to detect slopes and grade changes, adjusting material quantities accordingly.</li>
+    </ul>
+    <p>Is it perfect for every job? No. Complex terrain, heavily wooded lots, or properties with structures close to the fence line still benefit from a site visit. But for <strong>70-80% of residential jobs</strong>, satellite estimating gets you close enough to send a competitive quote within minutes.</p>
+
+    <h2>The Speed Advantage Is the Real Game-Changer</h2>
+    <p>Accuracy matters, but <strong>speed is what wins jobs</strong>. Industry data consistently shows that the first contractor to send a quote closes the deal 40-50% of the time. When your competitor is scheduling a site visit for Thursday and you're sending a professional, branded quote while you're still on the phone with the homeowner, you've fundamentally changed the competitive dynamic.</p>
+    <p>Think about it from the homeowner's perspective: they called three fence companies. One sent a detailed quote with materials breakdown and a clear price within 10 minutes. The other two said "I can come out next week to take a look." Who would you go with?</p>
+
+    <h2>What This Means for Your Business</h2>
+    <p>AI satellite estimating doesn't just save you time on individual quotes — it transforms your business model:</p>
+    <ul>
+      <li><strong>Eliminate windshield time:</strong> Stop driving to properties just to measure. Reserve site visits for complex jobs or final walk-throughs after the quote is accepted.</li>
+      <li><strong>Quote more jobs per day:</strong> Instead of 2-3 estimates per day (limited by drive time), you can quote 10-15 from your desk or phone.</li>
+      <li><strong>Expand your service area:</strong> When quoting doesn't require a visit, you can take jobs in areas you'd never drive to for a free estimate.</li>
+      <li><strong>Improve pricing accuracy:</strong> Over time, AI models trained on your completed jobs learn what your actual costs are, flagging quotes that are likely underpriced before they go out.</li>
+    </ul>
+
+    <h2>The Bottom Line</h2>
+    <p>AI satellite estimating isn't a gimmick and it isn't the future — it's available right now. The contractors who adopt it first will close more jobs, waste less time, and build more profitable businesses. The ones who don't will keep losing to whoever quotes faster.</p>
+    <p>The measuring wheel isn't going away tomorrow. But the contractors still relying on it exclusively are going to feel the squeeze.</p>
+  </div>
+  <div class="post-cta">
+    <h3>Ready to quote jobs in minutes?</h3>
+    <p>Try FenTek's AI satellite estimating free for 14 days.</p>
+    <a href="index.html" class="btn btn-primary btn-large">Start your free trial</a>
+  </div>
+</div>
+
+<!-- POST 2 FULL -->
+<div id="post2" class="blog-post hidden">
+  <a class="back" onclick="showIndex()">← Back to blog</a>
+  <div class="post-meta">
+    <span>April 7, 2026</span><span class="dot"></span><span>7 min read</span><span class="dot"></span><span style="color:#60A5FA">Business Growth</span>
+  </div>
+  <h1>5 Reasons You're Losing Fence Jobs (And How to Fix Each One Today)</h1>
+  <div class="post-body">
+    <p>You're good at building fences. Your work is clean, your crews are reliable, and your prices are fair. So why are you only closing a third of your quotes? The answer almost never has to do with the quality of your work. It has to do with everything that happens before the work starts.</p>
+
+    <h2>1. Your Quotes Take Too Long</h2>
+    <p>This is the single biggest job-killer in fence contracting. The average fence contractor takes 2-3 days from first contact to delivered quote. In that window, the homeowner is calling two or three other companies — and the first professional quote that lands in their inbox has a massive advantage.</p>
+    <p><strong>The fix:</strong> Get your quote turnaround under 24 hours. Under one hour is ideal. Tools like AI satellite estimating can get you there, but even switching from handwritten quotes to a digital template you can fill out on your phone will cut days off your response time.</p>
+
+    <h2>2. Your Quotes Don't Look Professional</h2>
+    <p>A homeowner is about to spend $4,000-$15,000 on a fence. If your quote arrives as a text message that says "200ft wood privacy fence - $8,500" with no breakdown, no terms, and no branding, you've already lost credibility. Compare that to a competitor who sends a branded PDF with line items, materials breakdown, payment terms, a timeline, and an e-signature button.</p>
+    <p><strong>The fix:</strong> Create a professional quote template with your logo, a clear materials and labor breakdown, payment terms, project timeline, and a warranty statement. Make it a PDF or digital link the customer can approve with one click.</p>
+
+    <h2>3. You Don't Follow Up</h2>
+    <p>You send a quote, the customer says "let me think about it," and you never hear from them again. Sound familiar? Most contractors send exactly zero follow-ups after the initial quote. Meanwhile, sales data across every industry shows that 80% of deals require 3-5 follow-ups to close.</p>
+    <p><strong>The fix:</strong> Set a reminder to follow up 2 days, 5 days, and 10 days after sending a quote. A simple text or email: "Hey [name], just checking in on the fence quote I sent over. Any questions I can answer?" This alone can increase your close rate by 15-20%.</p>
+
+    <h2>4. You're Not Offering Financing</h2>
+    <p>A $12,000 vinyl privacy fence is a big check to write at once. Many homeowners want the fence but can't (or don't want to) pay the full amount upfront. If you're not offering a monthly payment option, you're losing jobs to contractors who do — even if their price is higher.</p>
+    <p><strong>The fix:</strong> Partner with a contractor financing platform. When your quote says "$12,000 or as low as $215/month," the customer's mental math changes completely. The fence becomes affordable, and you get paid in full upfront while the financing company handles the payments.</p>
+
+    <h2>5. You Have No Online Presence</h2>
+    <p>Before a homeowner calls you, they Google you. If you don't have a website, no Google reviews, and no photos of your work, you've lost before you even pick up the phone. They'll call the company with 47 five-star reviews and a gallery of beautiful installations instead.</p>
+    <p><strong>The fix:</strong> At minimum, claim your Google Business Profile, ask every happy customer for a review (automate this with a post-job text), and build a simple website with photos of your best work. This is the single highest-ROI marketing investment a fence contractor can make.</p>
+
+    <h2>Start With One</h2>
+    <p>You don't need to fix all five at once. Pick the one that resonates most — for most contractors, it's quote speed — and focus on that for the next 30 days. Track your close rate before and after. The numbers will speak for themselves.</p>
+  </div>
+  <div class="post-cta">
+    <h3>Fix #1 and #2 today with FenTek</h3>
+    <p>AI-powered quoting that's fast, accurate, and professionally branded.</p>
+    <a href="index.html" class="btn btn-primary btn-large">Start your free trial</a>
+  </div>
+</div>
+
+<!-- POST 3 FULL -->
+<div id="post3" class="blog-post hidden">
+  <a class="back" onclick="showIndex()">← Back to blog</a>
+  <div class="post-meta">
+    <span>April 3, 2026</span><span class="dot"></span><span>5 min read</span><span class="dot"></span><span style="color:#E76F51">Industry Trends</span>
+  </div>
+  <h1>The $72 Billion Fence Market: Where the Growth Is in 2026</h1>
+  <div class="post-body">
+    <p>The US fencing market hit approximately $72 billion in 2025 and continues to grow at 5-6% annually. But that growth isn't distributed evenly across fence types, regions, or customer segments. Smart contractors are positioning themselves where the demand is heading, not where it's been.</p>
+    <p>Here's where the money is moving in 2026.</p>
+
+    <h2>Privacy Fencing Is Booming</h2>
+    <p>The work-from-home shift permanently changed how people think about their yards. When your backyard is also your office, gym, and entertainment space, privacy becomes a priority. <strong>Wood and vinyl privacy fencing are the fastest-growing segments</strong>, with homeowners willing to spend 20-30% more than they would have five years ago for taller, more aesthetic options.</p>
+    <p>Horizontal slat fences — the modern, clean-lined look popularized by home design shows and social media — command premium pricing and are increasingly requested by higher-income homeowners. If you're not offering horizontal options, you're leaving money on the table.</p>
+
+    <h2>Aluminum and Composite Are Taking Share</h2>
+    <p>Traditional chain link continues to decline in residential markets. Homeowners see it as dated and unattractive. Meanwhile, <strong>aluminum ornamental and composite fencing are surging</strong>. Both offer the look of premium materials with lower maintenance, which appeals to the "install it and forget it" homeowner.</p>
+    <p>Composite fencing in particular is following the trajectory of composite decking — early skepticism followed by rapid adoption once homeowners see the long-term value proposition. Contractors who develop expertise in composite installation now will own a growing niche.</p>
+
+    <h2>The Commercial Opportunity</h2>
+    <p>While most fence contractors focus on residential, the commercial and industrial segments offer higher contract values and more predictable demand. <strong>Security fencing, perimeter fencing for warehouses and data centers, and construction site temporary fencing</strong> are all growing as commercial construction rebounds.</p>
+    <p>Commercial jobs also tend to lead to repeat business and referrals within industry networks. One relationship with a general contractor or property management company can generate consistent work for years.</p>
+
+    <h2>Regional Hotspots</h2>
+    <p>Fence demand follows population growth and new construction. The Southeast (particularly Florida, Georgia, Tennessee, and the Carolinas), Texas, and the Mountain West (Colorado, Utah, Arizona) are seeing the strongest growth. If you're in one of these markets, demand is in your favor.</p>
+    <p>Even in slower-growth markets, replacement and upgrade work is steady. The average fence lasts 15-20 years, which means fences installed during the early 2000s housing boom are reaching end-of-life now — creating a wave of replacement demand regardless of new construction activity.</p>
+
+    <h2>What This Means for Your Business</h2>
+    <p>The fence market is healthy and growing, but the contractors who benefit most will be the ones who adapt to where demand is heading:</p>
+    <ul>
+      <li><strong>Expand into premium materials</strong> like horizontal wood, aluminum ornamental, and composite</li>
+      <li><strong>Develop a commercial pipeline</strong> alongside your residential base</li>
+      <li><strong>Invest in technology</strong> to quote faster, schedule better, and operate more efficiently — the market is growing, but so is competition</li>
+      <li><strong>Build your online presence</strong> to capture the growing share of homeowners who find their contractors through Google, not word-of-mouth</li>
+    </ul>
+    <p>The pie is getting bigger. Make sure you're getting a larger slice.</p>
+  </div>
+  <div class="post-cta">
+    <h3>Ready to grow your fence business?</h3>
+    <p>FenTek helps you quote faster, schedule smarter, and scale efficiently.</p>
+    <a href="index.html" class="btn btn-primary btn-large">Start your free trial</a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-logo">Fen<span>Tek</span></div>
+  <div class="foot-links">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="blog.html">Blog</a>
+    <a href="support.html">Support</a>
+    <a href="legal.html">Privacy</a>
+    <a href="legal.html">Terms</a>
+  </div>
+  <div class="copy">© 2026 FenTek. All rights reserved.</div>
+</footer>
+
+<script>
+function showPost(id){
+  document.getElementById('blog-index').classList.add('hidden');
+  document.querySelectorAll('.blog-post').forEach(p=>p.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+  window.scrollTo(0,0);
+}
+function showIndex(){
+  document.querySelectorAll('.blog-post').forEach(p=>p.classList.add('hidden'));
+  document.getElementById('blog-index').classList.remove('hidden');
+  window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>

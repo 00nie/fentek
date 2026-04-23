@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — FenTek | Help Center</title>
+  <meta name="description" content="Get help with FenTek. FAQs, contact support, and resources for fence contractors.">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&family=General+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .support-hero{padding:140px 40px 60px;text-align:center}
+    .support-hero h1{font-size:clamp(32px,5vw,48px);letter-spacing:-1.5px;margin-bottom:12px}
+    .support-hero p{font-size:17px;color:var(--text2);max-width:480px;margin:0 auto}
+    .support-content{max-width:800px;margin:0 auto;padding:0 40px 100px}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:56px}
+    .contact-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:28px 24px;text-align:center;transition:all .3s}
+    .contact-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+    .contact-card .icon{font-size:28px;margin-bottom:12px}
+    .contact-card h3{font-size:16px;margin-bottom:6px}
+    .contact-card p{font-size:13px;color:var(--text2);margin-bottom:12px}
+    .contact-card a{color:var(--green-light);font-size:14px;font-weight:600;text-decoration:none}
+    .contact-card a:hover{text-decoration:underline}
+    .faq-section{margin-top:20px}
+    .faq-section h2{font-size:24px;letter-spacing:-0.5px;margin-bottom:24px}
+    .faq-item{border-bottom:1px solid var(--border);padding:20px 0;cursor:pointer}
+    .faq-item:last-child{border-bottom:none}
+    .faq-question{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .faq-question h3{font-size:16px;font-weight:600;letter-spacing:-0.2px}
+    .faq-question .arrow{font-size:18px;color:var(--text3);transition:transform .2s;flex-shrink:0}
+    .faq-item.open .arrow{transform:rotate(45deg);color:var(--green-light)}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
+    .faq-item.open .faq-answer{max-height:300px;padding-top:12px}
+    .faq-answer p{font-size:14px;color:var(--text2);line-height:1.7}
+    @media(max-width:700px){.support-hero{padding:120px 20px 40px}.support-content{padding:0 20px 60px}.contact-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Fen<span>Tek</span></a>
+  <div class="nav-links">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#how">How it works</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="#" class="btn btn-primary">Start free trial</a>
+  </div>
+</nav>
+
+<div class="support-hero">
+  <h1>How can we help?</h1>
+  <p>Find answers to common questions or reach out to our team directly.</p>
+</div>
+
+<div class="support-content">
+
+  <!-- CONTACT -->
+  <div class="contact-grid" style="grid-template-columns:1fr;max-width:400px;margin:0 auto 56px">
+    <div class="contact-card">
+      <div class="icon">📧</div>
+      <h3>Email Support</h3>
+      <p>Send us a message and we'll respond within 24 hours.</p>
+      <a href="mailto:support@fentek.co">support@fentek.co</a>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <h3>How accurate is the AI satellite estimating?</h3>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Our satellite estimating is typically within 2-3% of hand measurements on flat terrain. The system uses high-resolution aerial imagery combined with property boundary data and elevation models. For complex terrain or heavily wooded lots, we recommend a site visit to verify, but for 70-80% of residential jobs, satellite estimating is accurate enough to send a competitive quote.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <h3>How long is the free trial?</h3>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>The free trial lasts 14 days and includes full access to all features on the Pro plan. No credit card is required to start. At the end of the trial, you can choose a plan that fits your business or your account will simply be paused — we never charge you without your consent.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <h3>Can I cancel anytime?</h3>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes. FenTek is month-to-month with no long-term contracts. You can cancel anytime from your account settings. You'll retain access through the end of your current billing period, and you can export all your data before your account is closed.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <h3>Does FenTek work with QuickBooks?</h3>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes. FenTek integrates with QuickBooks Online for two-way syncing of invoices, payments, and expenses. Once connected, your financial data flows automatically between the two platforms — no more double data entry. The QuickBooks integration is available on the Pro and Enterprise plans.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <h3>What fence types does the estimating engine support?</h3>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>FenTek supports all major fence types including wood privacy (board-on-board, dog-ear, shadow box), chain link, vinyl/PVC, aluminum ornamental, wrought iron, composite, and horizontal slat. Each type has its own material breakdown engine that calculates posts, rails, panels, concrete, hardware, and gates based on your custom pricing tables.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <h3>How many users can I have on my account?</h3>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>The Starter plan supports up to 2 crew members. The Pro plan supports unlimited crew members. The Enterprise plan includes unlimited users plus multi-location support. All crew members get access to the mobile app for viewing their daily jobs, routes, and materials lists.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <h3>Is my data secure?</h3>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes. FenTek uses industry-standard encryption (TLS/SSL in transit, AES-256 at rest), secure cloud infrastructure, and regular security audits. Your customer data and business information are never shared with other users. You can read our full privacy policy for details on how we handle and protect your data.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <div class="faq-question">
+        <h3>Can I import my existing customer data?</h3>
+        <span class="arrow">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>Yes. You can import customers, contacts, and job history via CSV upload during onboarding. If you're coming from another platform like Jobber or a spreadsheet, our support team can help you migrate your data for free during your first 30 days.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="foot-logo">Fen<span>Tek</span></div>
+  <div class="foot-links">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="blog.html">Blog</a>
+    <a href="support.html">Support</a>
+    <a href="legal.html">Privacy</a>
+    <a href="legal.html">Terms</a>
+  </div>
+  <div class="copy">© 2026 FenTek. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
