@@ -785,3 +785,189 @@ footer .copy {
   .hero h1 { letter-spacing: -1px }
   .price-card .price { font-size: 34px }
 }
+
+/* ========================================
+   PRODUCT SHOWCASE CAROUSEL
+   Add this to the bottom of your styles.css
+   ======================================== */
+
+.showcase-section {
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.showcase-carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel-window {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.carousel-frame {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+.browser-chrome {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.browser-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.browser-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+}
+
+.browser-url {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text3);
+  font-family: 'General Sans', monospace;
+}
+
+.carousel-track {
+  position: relative;
+  aspect-ratio: 16/9.5;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+}
+
+.carousel-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  color: var(--text2);
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'General Sans', sans-serif;
+}
+
+.carousel-arrow:hover {
+  border-color: var(--green-light);
+  color: var(--green-light);
+  background: rgba(82,183,136,0.08);
+}
+
+.carousel-info {
+  text-align: center;
+  padding: 28px 20px 0;
+}
+
+.carousel-step {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--green-light);
+  background: var(--green-glow);
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.carousel-title {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.carousel-desc {
+  font-size: 15px;
+  color: var(--text2);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border2);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s;
+}
+
+.carousel-dot.active {
+  background: var(--green-light);
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  .carousel-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-arrow {
+    display: none;
+  }
+  .carousel-window {
+    gap: 0;
+  }
+}
