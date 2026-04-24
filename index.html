@@ -102,6 +102,74 @@
 </section>
 
 
+  
+<!-- ==================== SHOWCASE ==================== -->
+
+  <section class="section showcase-section">
+  <div class="section-header">
+    <div class="tag">Your Contractor Dashboard</div>
+    <h2>See it in action</h2>
+    <p>All these features, one powerful dashboard. See exactly how FenTek works for fence contractors like you.</p>
+  </div>
+
+  <div class="showcase-carousel">
+    <div class="carousel-window">
+      <button class="carousel-arrow carousel-prev" onclick="carouselMove(-1)">‹</button>
+      <div class="carousel-frame">
+        <div class="browser-chrome">
+          <div class="browser-dots">
+            <span style="background:#FF5F57"></span>
+            <span style="background:#FEBC2E"></span>
+            <span style="background:#28C840"></span>
+          </div>
+          <div class="browser-url">app.fentek.co</div>
+        </div>
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide active">
+            <img src="assets/screen-dashboard.png" alt="FenTek Dashboard with AI Business Insights" loading="lazy">
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/screen-estimator.png" alt="FenTek Satellite Estimator with fence line drawn" loading="lazy">
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/screen-pipeline.png" alt="FenTek Pipeline kanban board" loading="lazy">
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/screen-quote.png" alt="FenTek Quote with materials breakdown" loading="lazy">
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/screen-schedule.png" alt="FenTek Schedule calendar" loading="lazy">
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/screen-forecast.png" alt="FenTek AI Demand Forecasting" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow carousel-next" onclick="carouselMove(1)">›</button>
+    </div>
+
+    <div class="carousel-info">
+      <div class="carousel-step" id="carouselStep">Step 1</div>
+      <h3 class="carousel-title" id="carouselTitle">Dashboard & AI Insights</h3>
+      <p class="carousel-desc" id="carouselDesc">See your open leads, pipeline value, active jobs, and outstanding AR at a glance. AI Business Insights analyzes your data and gives actionable recommendations to grow revenue.</p>
+    </div>
+
+    <div class="carousel-dots" id="carouselDots">
+      <button class="carousel-dot active" onclick="carouselGoTo(0)"></button>
+      <button class="carousel-dot" onclick="carouselGoTo(1)"></button>
+      <button class="carousel-dot" onclick="carouselGoTo(2)"></button>
+      <button class="carousel-dot" onclick="carouselGoTo(3)"></button>
+      <button class="carousel-dot" onclick="carouselGoTo(4)"></button>
+      <button class="carousel-dot" onclick="carouselGoTo(5)"></button>
+    </div>
+
+    <div style="text-align:center;margin-top:32px">
+      <a href="#" class="btn btn-primary btn-large">Start your free 14-day trial</a>
+    </div>
+  </div>
+</section>
+
+
 <!-- ==================== IMAGE BREAK 1 ==================== -->
 <!-- IMAGE: Add your image as assets/break-1.jpg (modern fence + luxury backyard) -->
 <div class="image-break">
@@ -283,6 +351,55 @@
   </div>
   <div class="copy">© 2026 FenTek. All rights reserved.</div>
 </footer>
+
+
+  <script>
+const slides = [
+  { step: "Step 1", title: "Dashboard & AI Insights", desc: "See your open leads, pipeline value, active jobs, and outstanding AR at a glance. AI Business Insights analyzes your data and gives actionable recommendations to grow revenue." },
+  { step: "Step 2", title: "Satellite Estimator", desc: "Enter any address, draw the fence line on satellite imagery, and get instant measurements. Select material type, style, and height — FenTek calculates everything automatically." },
+  { step: "Step 3", title: "Pipeline Management", desc: "Track every project from lead to completion with a visual kanban board. See your pipeline value, move projects between stages, and never let a deal slip through the cracks." },
+  { step: "Step 4", title: "Quotes & Proposals", desc: "Auto-generated quotes with full materials breakdown, pricing, and customer details. Send branded proposals in one click or let customers approve through the customer portal." },
+  { step: "Step 5", title: "Crew Scheduling", desc: "Visual calendar with all your jobs. Assign crews, track job status, and keep your entire operation organized. Crews see their daily schedule on the mobile app." },
+  { step: "Step 6", title: "AI Demand Forecasting", desc: "Revenue projections, seasonal trends, and 3-month forecasts powered by your actual business data. Know what's coming so you can plan crew capacity and materials ahead of time." }
+];
+
+let currentSlide = 0;
+
+function carouselGoTo(index) {
+  currentSlide = index;
+  updateCarousel();
+}
+
+function carouselMove(dir) {
+  currentSlide = (currentSlide + dir + slides.length) % slides.length;
+  updateCarousel();
+}
+
+function updateCarousel() {
+  const track = document.getElementById('carouselTrack');
+  const allSlides = track.querySelectorAll('.carousel-slide');
+  allSlides.forEach((s, i) => {
+    s.classList.toggle('active', i === currentSlide);
+  });
+
+  document.getElementById('carouselStep').textContent = slides[currentSlide].step;
+  document.getElementById('carouselTitle').textContent = slides[currentSlide].title;
+  document.getElementById('carouselDesc').textContent = slides[currentSlide].desc;
+
+  const dots = document.querySelectorAll('.carousel-dot');
+  dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+}
+
+// Auto-advance every 5 seconds
+let autoPlay = setInterval(() => carouselMove(1), 5000);
+
+// Pause on hover
+document.querySelector('.showcase-carousel')?.addEventListener('mouseenter', () => clearInterval(autoPlay));
+document.querySelector('.showcase-carousel')?.addEventListener('mouseleave', () => {
+  autoPlay = setInterval(() => carouselMove(1), 5000);
+});
+</script>
+
 
 </body>
 </html>
